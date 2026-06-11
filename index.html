@@ -4,20 +4,36 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>YAAS — Community Beta</title>
-  <meta name="description" content="YAAS — Beta community app. Deneme sürümü." />
-  <meta name="robots" content="index, follow" />
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+  <meta name="description" content="YAAS — Beta community app. Sohbet kanalları, destek bileti ve kayıt doğrulama." />
+  <meta property="og:title" content="YAAS — Community Beta" />
+  <meta property="og:description" content="YAAS — Beta community app. Deneme sürümü ve kaynak kodu burada." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aliyevali90.github.io/yaas-site/" />
+  <link rel="canonical" href="https://aliyevali90.github.io/yaas-site/" />
+  <style>
+    :root{--accent:#0b5cff;--muted:#6b7280}
+    html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#f8fafc,#ffffff);color:#0b1220}
+    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px}
+    .card{max-width:960px;text-align:center;padding:48px;border-radius:14px}
+    .logo{display:inline-block;background:linear-gradient(90deg,var(--accent),#00c6ff);color:#fff;padding:14px 18px;border-radius:10px;font-weight:800;font-size:48px;animation:float 3s ease-in-out infinite}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+    h1{margin:18px 0 6px;font-size:28px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .cta{display:inline-block;padding:12px 18px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+    .meta{margin-top:22px;color:var(--muted);font-size:14px}
+    a.inline{color:var(--accent)}
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"YAAS","url":"https://aliyevali90.github.io/yaas-site/","description":"YAAS — Beta community app"}</script>
 </head>
 <body>
-  <header>
-    <h1>YAAS</h1>
-    <p>YAAS — Beta demo. Hemen deneyin.</p>
-  </header>
-  <main>
-    <p>Uygulamayı yerelde çalıştırmak için backend klasörünü kullanın. Kaynak: <a href="https://github.com/AliyevAli90/yaas-site">GitHub</a>.</p>
-  </main>
-  <footer>
-    <p>YAAS — Beta. Kişisel isim içermez.</p>
-  </footer>
+  <div class="wrap">
+    <div class="card">
+      <div class="logo">YAAS</div>
+      <h1>YAAS — Community Beta</h1>
+      <p class="lead">Beta demo: sohbet kanalları, destek bileti, hesap doğrulama. Kaynak kodu inceleyin veya yerelde backend'i çalıştırın.</p>
+      <a class="cta" href="https://github.com/AliyevAli90/yaas-site" target="_blank" rel="noopener">Kaynak & Demo</a>
+      <div class="meta">Sitemap: <a class="inline" href="/sitemap.xml">sitemap.xml</a> · Robots: <a class="inline" href="/robots.txt">robots.txt</a></div>
+    </div>
+  </div>
 </body>
 </html>
