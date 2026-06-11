@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://AliyevAli90.github.io/yaas-site/sitemap.xml
+Sitemap: https://aliyevali90.github.io/yaas-site/sitemap.xml
