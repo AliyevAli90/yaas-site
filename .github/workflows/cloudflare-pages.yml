@@ -1,0 +1,29 @@
+name: Deploy to Cloudflare Pages
+on:
+  push:
+    branches: [ main ]
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build (static)
+        run: |
+          echo "Static site — no build step"
+      - name: Check Cloudflare secrets
+        run: |
+          if [ -z "${{ secrets.CF_API_TOKEN }}" ] || [ -z "${{ secrets.CF_ACCOUNT_ID }}" ]; then
+            echo "CF secrets missing — set CF_API_TOKEN and CF_ACCOUNT_ID in repository Settings → Secrets → Actions to enable automatic deploy"
+            exit 0
+          fi
+      - name: Setup Wrangler
+        uses: cloudflare/wrangler-action@2
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+      - name: Publish to Cloudflare Pages
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+        run: npx wrangler pages publish . --project-name=yaas-site --branch=main
